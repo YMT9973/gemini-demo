@@ -1,15 +1,16 @@
 import streamlit as st
 import google.generativeai as genai
+import env as env
 
 # Streamlitのタイトルと説明
 st.title("💬 Chatbot")
 st.caption("🚀 A streamlit chatbot powered by Google AI")
 
 # Google Generative AI（Gemini API）のAPIキー設定
-genai.configure(api_key="AIzaSyBwLu6mVg9kNfBZCvWZ5HKQkLGQ-1sSiIw")
+genai.configure(api_key=env.gemini_api_key)
 
 # Geminiモデルの設定
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.5 pro')
 
 # セッション状態にメッセージリストがない場合は初期化
 if "messages" not in st.session_state:
