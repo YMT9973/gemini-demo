@@ -10,7 +10,7 @@ st.caption("🚀 A streamlit chatbot powered by Google AI")
 genai.configure(api_key=env.gemini_api_key)
 
 # Geminiモデルの設定
-model = genai.GenerativeModel('gemini-1.5 pro')
+model = genai.GenerativeModel('gemini-1.0-pro-001')
 
 # セッション状態にメッセージリストがない場合は初期化
 if "messages" not in st.session_state:
