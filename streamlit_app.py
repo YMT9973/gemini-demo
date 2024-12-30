@@ -14,7 +14,7 @@ model = genai.GenerativeModel('gemini-1.0-pro-001')
 
 # セッションにメッセージがない場合は初期化
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+    st.session_state["messages"] = [{"role": "アシスタント", "content": "なにか手伝えることはありますか?"}]
 
 # 既存のメッセージを表示
 for msg in st.session_state.messages:
